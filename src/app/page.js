@@ -53,7 +53,9 @@ export default function Home() {
 
   useEffect(() => {
     [bgVideoRef, carVideoRef].forEach(r => {
-      if (r.current) r.current.play().catch(() => {});
+      if (!r.current) return;
+      r.current.muted = true;
+      r.current.play().catch(() => {});
     });
   }, []);
 
