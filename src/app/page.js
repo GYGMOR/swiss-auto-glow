@@ -42,11 +42,19 @@ const ROMAN = ['I', 'II', 'III', 'IV'];
 
 export default function Home() {
   const [content, setContent] = useState(DEFAULT_CONTENT);
+  const bgVideoRef = useRef(null);
+  const carVideoRef = useRef(null);
 
   useEffect(() => {
     fetch('/api/content').then(r => r.json()).then(d => {
       if (d && d.hero) setContent(d);
     }).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    [bgVideoRef, carVideoRef].forEach(r => {
+      if (r.current) r.current.play().catch(() => {});
+    });
   }, []);
 
   useEffect(() => {
@@ -75,7 +83,7 @@ export default function Home() {
           HERO — Fullscreen animated
       ═══════════════════════════════════════════════════════════ */}
       <section className="hero">
-        <video className="hero-video" autoPlay muted loop playsInline poster={h.image} aria-hidden="true">
+        <video ref={bgVideoRef} className="hero-video" autoPlay muted loop playsInline poster={h.image} aria-hidden="true">
           <source src="/hero_video.mp4" type="video/mp4"/>
         </video>
         <div className="hero-video-overlay"/>
@@ -113,6 +121,7 @@ export default function Home() {
           <div className="hero-visual car-swipe-right">
             <div className="hero-img-wrap">
               <video
+                ref={carVideoRef}
                 className="hero-img"
                 autoPlay
                 muted
@@ -351,11 +360,6 @@ export default function Home() {
           object-fit: cover; z-index: 0; opacity: 0.35;
           pointer-events: none;
         }
-        video::-webkit-media-controls,
-        video::-webkit-media-controls-panel,
-        video::-webkit-media-controls-start-playback-button,
-        video::-webkit-media-controls-play-button { display: none !important; }
-        video { -webkit-appearance: none; }
         .hero-video-overlay {
           position: absolute; inset: 0; z-index: 0;
           background: linear-gradient(to bottom, rgba(7,7,8,.55) 0%, rgba(7,7,8,.15) 50%, rgba(7,7,8,.85) 100%);

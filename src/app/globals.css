@@ -1,3 +1,11 @@
+/* Hide native video play buttons on all browsers incl. iOS Safari */
+video::-webkit-media-controls,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-play-button { display: none !important; opacity: 0 !important; }
+video { -webkit-appearance: none; }
+
 /* Design System & Premium Dark Theme */
 :root {
   --bg-primary: #070708;
