@@ -1,0 +1,91 @@
+export const DEFAULT_CONTENT = {
+  hero: {
+    eyebrow: 'Premium Detailing · Schweiz',
+    h1_1: 'DAS PRESTIGE',
+    h1_2: 'IHRES AUTOMOBILS',
+    h1_3: 'IN PERFEKTION.',
+    subtitle: 'Professionelle Handarbeit für exklusive Automobile. Wir reinigen nicht nur — wir konservieren Werte auf Lebenszeit.',
+    btn1: 'ANFRAGE STARTEN', btn1_href: '#anfrage',
+    btn2: 'LEISTUNGEN ↓',   btn2_href: '#services',
+    trust: ['100% Handarbeit', 'Zürich & Region', 'Nur auf Anfrage'],
+    stats: [
+      { val: 8,   suffix: '+', label: 'Jahre Erfahrung' },
+      { val: 200, suffix: '+', label: 'Fahrzeuge aufbereitet' },
+      { val: 100, suffix: '%', label: 'Handarbeit' },
+      { val: 5,   suffix: '★', label: 'Kundenzufriedenheit' },
+    ],
+    image: '/hero_car.png',
+    badge_val: 'Premium',
+    badge_sub: 'Quality Assured',
+  },
+  philosophy: {
+    quote: '„Wahre Eleganz duldet keine Kompromisse. Wir arbeiten ausschließlich für Kunden, die Perfektion schätzen."',
+    body: 'Wir vergeben keine Standardtermine oder monatliche Abonnements. Jedes Fahrzeug ist ein Kunstwerk, das individuelle Betreuung erfordert. Durch eine strikte Begrenzung auf wenige Fahrzeuge pro Monat garantieren wir ein Qualitätsniveau, das mit herkömmlichen Werkstätten nicht vergleichbar ist.',
+    signature: 'Christian — Gründer & Meister-Detailer',
+    stats: [
+      { n: 12, s: '/Monat', label: 'Max. Fahrzeuge' },
+      { n: 8,  s: 'h+',    label: 'Handarbeit / Auftrag' },
+      { n: 5,  s: '★',     label: 'Bewertung' },
+    ],
+  },
+  services: {
+    eyebrow: 'Die 4 Säulen',
+    title: 'MASSGESCHNEIDERte PFLEGE',
+    pillars: [
+      {
+        title: 'INNENRAUM VEREDELUNG',
+        description: 'Tiefenhygienische Reinigung aller Oberflächen, materialspezifische Lederpflege, Versiegelung von Alcantara und Carbon sowie Beseitigung feinster Gerüche. Ein Fahrgefühl wie am ersten Tag.',
+        features: ['Leder- & Alcantara-Pflege', 'Tiefenreinigung Armaturenbrett', 'Geruchsneutralisation', 'Carbon-Versiegelung'],
+        image: '/car_interior.png',
+      },
+      {
+        title: 'LACKPFLEGE & LACKSCHUTZ',
+        description: 'Mehrstufige Lackkorrektur zur Beseitigung von Kratzern und Hologrammen, gefolgt von einer extrem widerstandsfähigen Keramikversiegelung für maximalen Tiefenglanz und Abperleffekt.',
+        features: ['Lackkorrektur 2–3 Stufen', 'Hologramme & Kratzer entfernen', 'Keramikversiegelung', 'Langzeit-Abperleffekt'],
+        image: '/car_front.png',
+      },
+      {
+        title: 'UNTERBODENSCHUTZ',
+        description: 'Rückstandsfreie Reinigung mittels Trockeneis-Verfahren, gefolgt von einer transparenten, widerstandsfähigen Polymer-Versiegelung, die den Unterboden vor Salz, Schmutz und Feuchtigkeit schützt.',
+        features: ['Trockeneis-Reinigung', 'Polymer-Versiegelung', 'Salzschutz & Korrosionsschutz', 'Langzeit-Dokumentation'],
+        image: '/underbody_care.png',
+      },
+      {
+        title: 'ROSTFREI & VORSORGE',
+        description: 'Präzise Entfernung von Rostherden, gefolgt von einer professionellen Hohlraumkonservierung mit Kriechölen. Ihr Automobil wird langfristig vor Korrosion geschützt und bleibt absolut rostfrei.',
+        features: ['Rostentfernung & Behandlung', 'Hohlraumversiegelung', 'Kriechöl-Konservierung', 'Werterhalt-Garantie'],
+        image: '/car_rear.png',
+      },
+    ],
+  },
+  showroom: {
+    header: 'Premium Showroom',
+    heading: 'DAS FAHRZEUG',
+    heading_gold: 'IN PERFEKTION',
+    body: 'Klicken Sie auf die leuchtenden Punkte am Fahrzeug, um zu erfahren, wie wir jeden Bereich professionell aufbereiten.',
+    hotspots: [
+      { id: 'reifen',    label: 'Reifen & Felgen',   title: 'Reifen & Felgen Pflege',    tag: 'Tiefenreinigung',   description: 'Unsere Felgen werden mit speziellen Felgenreinigern tiefengereinigt, die Bremsstaub und Straßenschmutz zuverlässig lösen. Reifenpflege mit UV-Schutz verleiht dem Gummi einen makellosen, tiefen Glanz.' },
+      { id: 'scheiben',  label: 'Scheiben',           title: 'Scheiben & Verglasung',     tag: 'Nano-Versiegelung', description: 'Alle Scheiben werden mit professionellen Glasreinigern streifenfrei gereinigt. Eine optionale Nano-Glasversiegelung sorgt für optimalen Abperleffekt – für bis zu 12 Monate.' },
+      { id: 'lack',      label: 'Lack & Karosserie',  title: 'Lackpflege & Versiegelung', tag: 'Keramik-Coating',   description: 'Die Lackoberfläche wird mit mehrstufiger Maschinenpoltur von Kratzern und Hologrammen befreit. Abschließend wird eine Keramikversiegelung aufgetragen, die bis zu 5 Jahre anhält.' },
+      { id: 'innenraum', label: 'Innenraum',          title: 'Innenraum-Detailing',       tag: 'Komplett-Pflege',   description: 'Jede Oberfläche im Innenraum – von Leder über Alcantara bis Carbon – wird materialgerecht behandelt, gereinigt und versiegelt. Das Ergebnis: Ein Fahrzeuginterieur wie am ersten Tag.' },
+    ],
+  },
+  inquiry: {
+    eyebrow: 'Erstkontakt',
+    title: 'BEWERBEN SIE SICH FÜR EINEN TERMIN',
+    subtitle: 'Wir arbeiten exklusiv auf Anfrage und nehmen nur Kunden auf, die eine langfristige Qualität zu schätzen wissen.',
+    services: [
+      { id: 'innenraum',  title: 'Innenraum Veredelung',       desc: 'Tiefenreine Cockpitpflege, Lederaufbereitung & Versiegelung' },
+      { id: 'pflege',     title: 'Lackpflege & Keramikschutz', desc: 'Mehrstufige Politur & High-End Keramikbeschichtung' },
+      { id: 'unterboden', title: 'Unterbodenschutz',           desc: 'Trockeneisreinigung, Versiegelung & Wachsschutz' },
+      { id: 'rostfrei',   title: 'Rostbeseitigung & Vorsorge', desc: 'Mechanische Rostentfernung, Hohlraumkonservierung' },
+    ],
+  },
+  contact: {
+    address: 'Industriestrasse 12, 8000 Zürich',
+    phone: '+41 79 000 00 00',
+    email: 'info@detailing-christian.ch',
+    footer_desc: 'Exklusive Handarbeit für anspruchsvolle Fahrzeughalter. Spezialisiert auf Lackpflege, Innenraumdetailing und dauerhaften Hohlraum- und Unterbodenschutz.',
+    maps_url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43232.06208940807!2d8.515907474415849!3d47.37743372223707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b9745b40d21%3A0x81f125a072049d5!2sZ%C3%BCrich!5e0!3m2!1sde!2sch!4v1700000000000!5m2!1sde!2sch',
+  },
+};
