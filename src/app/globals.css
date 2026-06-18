@@ -1,3 +1,15 @@
+/* Mobile: show image, hide video — Desktop: show video, hide image */
+.hero-bg-desktop  { display: block; }
+.hero-bg-mobile   { display: none; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.45; pointer-events: none; }
+.hero-media-desktop { display: block; }
+.hero-media-mobile  { display: none; }
+@media (max-width: 900px) {
+  .hero-bg-desktop  { display: none; }
+  .hero-bg-mobile   { display: block; }
+  .hero-media-desktop { display: none !important; }
+  .hero-media-mobile  { display: block !important; }
+}
+
 /* Hide native video play buttons on all browsers incl. iOS Safari */
 video::-webkit-media-controls,
 video::-webkit-media-controls-panel,

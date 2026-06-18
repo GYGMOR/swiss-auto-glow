@@ -87,9 +87,10 @@ export default function Home() {
           HERO — Fullscreen animated
       ═══════════════════════════════════════════════════════════ */}
       <section className="hero">
-        <video ref={bgVideoRef} className="hero-video" autoPlay muted loop playsInline poster={h.image} aria-hidden="true" onLoadedMetadata={e=>{e.target.muted=true;e.target.play().catch(()=>{})}}>
+        <video ref={bgVideoRef} className="hero-video hero-bg-desktop" autoPlay muted loop playsInline poster={h.image} aria-hidden="true" onLoadedMetadata={e=>{e.target.muted=true;e.target.play().catch(()=>{})}}>
           <source src="/hero_video.mp4" type="video/mp4"/>
         </video>
+        <img src={h.image} alt="" className="hero-bg-mobile" aria-hidden="true" />
         <div className="hero-video-overlay"/>
         <div className="hero-bg-grid" />
         <div className="hero-bg-glow hero-bg-glow--1" />
@@ -367,13 +368,6 @@ export default function Home() {
           position: absolute; inset: 0; width: 100%; height: 100%;
           object-fit: cover; z-index: 0; opacity: 0.35;
           pointer-events: none;
-        }
-        .hero-media-desktop { display: block; }
-        .hero-media-mobile  { display: none; }
-        @media (max-width: 900px) {
-          .hero-video         { display: none; }
-          .hero-media-desktop { display: none; }
-          .hero-media-mobile  { display: block; }
         }
         .hero-video-overlay {
           position: absolute; inset: 0; z-index: 0;
