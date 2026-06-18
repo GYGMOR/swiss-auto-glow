@@ -109,10 +109,19 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Car image */}
+          {/* Car video */}
           <div className="hero-visual car-swipe-right">
             <div className="hero-img-wrap">
-              <img src={h.image} alt="Premium Detailing Fahrzeug" className="hero-img" />
+              <video
+                className="hero-img"
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster={h.image}
+              >
+                <source src="/video/car.mp4" type="video/mp4" />
+              </video>
               <div className="hero-img-glare" />
             </div>
             <div className="hero-badge">
