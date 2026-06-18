@@ -121,12 +121,13 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Car video */}
+          {/* Car visual */}
           <div className="hero-visual car-swipe-right">
             <div className="hero-img-wrap">
+              {/* Desktop: video */}
               <video
                 ref={carVideoRef}
-                className="hero-img"
+                className="hero-img hero-media-desktop"
                 autoPlay
                 muted
                 playsInline
@@ -136,6 +137,8 @@ export default function Home() {
               >
                 <source src="/video/car.mp4" type="video/mp4" />
               </video>
+              {/* Mobile: static poster image */}
+              <img src={h.image} alt="Premium Detailing Fahrzeug" className="hero-img hero-media-mobile" />
               <div className="hero-img-glare" />
             </div>
             <div className="hero-badge">
@@ -364,6 +367,13 @@ export default function Home() {
           position: absolute; inset: 0; width: 100%; height: 100%;
           object-fit: cover; z-index: 0; opacity: 0.35;
           pointer-events: none;
+        }
+        .hero-media-desktop { display: block; }
+        .hero-media-mobile  { display: none; }
+        @media (max-width: 900px) {
+          .hero-video         { display: none; }
+          .hero-media-desktop { display: none; }
+          .hero-media-mobile  { display: block; }
         }
         .hero-video-overlay {
           position: absolute; inset: 0; z-index: 0;
