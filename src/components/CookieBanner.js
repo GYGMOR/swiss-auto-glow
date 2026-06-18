@@ -52,7 +52,7 @@ export default function CookieBanner() {
         .cookie-banner-container {
           position: fixed;
           bottom: 24px;
-          right: 24px;
+          left: 24px;
           max-width: 450px;
           z-index: 9999;
           padding: 1.5rem;

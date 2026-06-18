@@ -24,10 +24,10 @@ export async function generateMetadata() {
   try {
     const seo = getSeo();
     return {
-      title: seo.title || "Christian Premium Detailing | High-End Autopflege & Veredelung",
+      title: seo.title || "Swiss Auto Glow | High-End Autopflege & Veredelung",
       description: seo.description || "Tiefenreine Innenraumpflege und dauerhafter Unterboden- & Rostschutz. Nur auf Anfrage.",
       keywords: seo.keywords || "Car Detailing, Autoaufbereitung, Unterbodenschutz, Rostschutz",
-      metadataBase: new URL("https://detailing-christian.ch"), // Mock/placeholder URL for SEO schema validation
+      metadataBase: new URL("https://swiss-auto-glow.ch"), // Mock/placeholder URL for SEO schema validation
       openGraph: {
         title: seo.title,
         description: seo.description,
@@ -37,7 +37,7 @@ export async function generateMetadata() {
     };
   } catch (error) {
     return {
-      title: "Christian Premium Detailing",
+      title: "Swiss Auto Glow",
       description: "High-End Autopflege & Veredelung.",
     };
   }
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AutoRepair",
-              "name": "Christian Premium Detailing",
+              "name": "Swiss Auto Glow",
               "description": "High-End Fahrzeugpflege, Hohlraumversiegelung und professioneller Rostschutz.",
               "address": {
                 "@type": "PostalAddress",
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
               "priceRange": "$$$$",
               "telephone": "+41 79 000 00 00",
               "openingHours": "Mo-Fr 08:00-18:00",
-              "url": "https://detailing-christian.ch"
+              "url": "https://swiss-auto-glow.ch"
             })
           }}
         />

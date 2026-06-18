@@ -110,7 +110,7 @@ export default function InquiryForm() {
           <br /><br />
           Ihre Anfrage für den <strong>{formData.carBrandModel}</strong> wird von Christian persönlich geprüft. Sie erhalten innerhalb von 48 Stunden eine Rückmeldung bezüglich einer ersten Begutachtung.
         </p>
-        <span className="success-footer">Christian Premium Detailing — Nur auf Anfrage.</span>
+        <span className="success-footer">Swiss Auto Glow — Nur auf Anfrage.</span>
       </div>
     );
   }

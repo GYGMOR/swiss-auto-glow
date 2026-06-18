@@ -7,7 +7,7 @@ const DB_FILE = path.join(DB_DIR, 'db.json');
 const DEFAULT_DB = {
   inquiries: [],
   seo: {
-    title: 'Christian Premium Detailing | High-End Autopflege & Veredelung',
+    title: 'Swiss Auto Glow | High-End Autopflege & Veredelung',
     description: 'Bespoke Fahrzeugaufbereitung, tiefenreine Innenraumpflege und dauerhafter Unterboden- & Rostschutz für exklusive Automobile. Service ausschließlich auf Anfrage.',
     keywords: 'Car Detailing, Autoaufbereitung, Innenraumpflege, Unterbodenschutz, Rostschutz, Hohlraumversiegelung, Premium Autopflege, Christian Detailing',
   },
@@ -94,7 +94,7 @@ export function deleteInquiry(id) {
 /* ── SEO ───────────────────────────────────────────────────── */
 export function getSeo() {
   return readDb().seo || {
-    title: 'Christian Premium Detailing | High-End Autopflege',
+    title: 'Swiss Auto Glow | High-End Autopflege',
     description: 'Bespoke Fahrzeugaufbereitung.',
     keywords: 'Detailing',
   };

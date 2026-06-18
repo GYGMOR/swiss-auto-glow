@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Über Uns | Christian Premium Detailing",
+  title: "Über Uns | Swiss Auto Glow",
   description: "Erfahren Sie mehr über die Leidenschaft, Präzision und das Handwerk hinter unseren exklusiven Autopflege-Leistungen.",
 };
 
@@ -16,7 +16,7 @@ export default function AboutPage() {
           <span className="about-sub">DIE STORY</span>
           <h1 className="about-title">Präzision <span className="highlight-word">Aus Leidenschaft</span></h1>
           <p className="about-subtitle">
-            Hinter Christian Premium Detailing steht der Anspruch, das Beste aus jedem Fahrzeug herauszuholen und Werte für Jahrzehnte zu schützen.
+            Hinter Swiss Auto Glow steht der Anspruch, das Beste aus jedem Fahrzeug herauszuholen und Werte für Jahrzehnte zu schützen.
           </p>
         </div>
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
           <div className="about-text-panel glass-panel">
             <h2>Wer ist Christian?</h2>
             <p>
-              Gegründet wurde Christian Premium Detailing aus einer reinen Passion für klassische Automobile und exklusive Sportwagen. Schnell wurde klar: Standard-Waschstraßen und schnelle Aufbereitungen werden der Seele eines Automobils nicht gerecht. 
+              Gegründet wurde Swiss Auto Glow aus einer reinen Passion für klassische Automobile und exklusive Sportwagen. Schnell wurde klar: Standard-Waschstraßen und schnelle Aufbereitungen werden der Seele eines Automobils nicht gerecht. 
             </p>
             <p>
               Nach jahrelanger Perfektionierung von Techniken in der Lackkorrektur, der Lederrestaurierung und dem Hohlraum- & Unterbodenschutz haben wir uns im Großraum Zürich niedergelassen, um Fahrzeughaltern eine kompromisslose Anlaufstelle zu bieten.

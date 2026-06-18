@@ -96,7 +96,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p className="copyright">
-            &copy; {new Date().getFullYear()} Christian Premium Detailing — Alle Rechte vorbehalten.
+            &copy; {new Date().getFullYear()} Swiss Auto Glow — Alle Rechte vorbehalten.
           </p>
           <p className="footer-tagline">High-End Fahrzeugpflege &amp; Rostschutz.</p>
         </div>

@@ -37,7 +37,7 @@ export default function Header() {
       <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container header-container">
           <Link href="/" className="logo" onClick={close}>
-            <span className="logo-name">CHRISTIAN</span>
+            <span className="logo-name">SWISS AUTO GLOW</span>
             <span className="logo-sub">PREMIUM DETAILING</span>
           </Link>
 
@@ -78,7 +78,7 @@ export default function Header() {
           {/* Header row: logo + close */}
           <div className="mn-header">
             <div className="mn-logo">
-              <span className="logo-name">CHRISTIAN</span>
+              <span className="logo-name">SWISS AUTO GLOW</span>
               <span className="logo-sub">PREMIUM DETAILING</span>
             </div>
             <button className="mn-close" onClick={close} aria-label="Schließen">
@@ -112,7 +112,7 @@ export default function Header() {
           <div className="mn-contact">
             <p className="mn-contact-label">Kontakt</p>
             <a href="tel:+41790000000" className="mn-contact-value">+41 79 000 00 00</a>
-            <a href="mailto:info@detailing-christian.ch" className="mn-contact-value">info@detailing-christian.ch</a>
+            <a href="mailto:info@swiss-auto-glow.ch" className="mn-contact-value">info@swiss-auto-glow.ch</a>
           </div>
 
           {/* CTA */}

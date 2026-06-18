@@ -84,7 +84,7 @@ export const DEFAULT_CONTENT = {
   contact: {
     address: 'Industriestrasse 12, 8000 Zürich',
     phone: '+41 79 000 00 00',
-    email: 'info@detailing-christian.ch',
+    email: 'info@swiss-auto-glow.ch',
     footer_desc: 'Exklusive Handarbeit für anspruchsvolle Fahrzeughalter. Spezialisiert auf Lackpflege, Innenraumdetailing und dauerhaften Hohlraum- und Unterbodenschutz.',
     maps_url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43232.06208940807!2d8.515907474415849!3d47.37743372223707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b9745b40d21%3A0x81f125a072049d5!2sZ%C3%BCrich!5e0!3m2!1sde!2sch!4v1700000000000!5m2!1sde!2sch',
   },

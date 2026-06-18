@@ -48,8 +48,8 @@ function getLegalContent(slug) {
         <h2>Angaben gemäß § 5 TMG / DSG</h2>
         <p>
           <strong>Betreiber der Website:</strong><br />
-          Christian Premium Detailing<br />
-          Inhaber: Christian Hediger<br />
+          Swiss Auto Glow<br />
+          Inhaber: Christian<br />
           Industriestrasse 12<br />
           8000 Zürich<br />
           Schweiz
@@ -58,18 +58,18 @@ function getLegalContent(slug) {
         <h2>Kontakt</h2>
         <p>
           Telefon: +41 79 000 00 00<br />
-          E-Mail: info@detailing-christian.ch<br />
-          Webseite: https://detailing-christian.ch
+          E-Mail: info@swiss-auto-glow.ch<br />
+          Webseite: https://swiss-auto-glow.ch
         </p>
 
         <h2>Vertretungsberechtigte Person</h2>
-        <p>Christian Hediger, Inhaber & Chef-Detailer</p>
+        <p>Christian, Inhaber & Chef-Detailer</p>
 
         <h2>Mehrwertsteuer-Nummer (UID)</h2>
         <p>CHE-123.456.789 MWST (Mockup)</p>
 
         <h2>Verantwortlich für den Inhalt</h2>
-        <p>Christian Hediger, Anschrift wie oben.</p>
+        <p>Christian, Anschrift wie oben.</p>
 
         <h2>Haftungsausschluss</h2>
         <p>
@@ -122,7 +122,7 @@ function getLegalContent(slug) {
       html: `
         <h2>1. Geltungsbereich und Allgemeines</h2>
         <p>
-          Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen und Verträge im Bereich Fahrzeugpflege, Lackaufbereitung, Unterbodenschutz und Korrosionsschutz (Rostschutz) von Christian Premium Detailing.
+          Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen und Verträge im Bereich Fahrzeugpflege, Lackaufbereitung, Unterbodenschutz und Korrosionsschutz (Rostschutz) von Swiss Auto Glow.
         </p>
 
         <h2>2. Vertragsabschluss / Premium-Modell</h2>
@@ -157,8 +157,8 @@ function getLegalContent(slug) {
         <h2>Verantwortliche Stelle</h2>
         <p>
           Verantwortlicher für die Datenverarbeitungen auf dieser Website ist:<br />
-          Christian Hediger<br />
-          E-Mail: info@detailing-christian.ch
+          Christian<br />
+          E-Mail: info@swiss-auto-glow.ch
         </p>
 
         <h2>Datenminimierung und Server-Analysen</h2>

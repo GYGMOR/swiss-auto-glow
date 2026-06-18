@@ -602,7 +602,8 @@ export default function Home() {
         .pillar-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.04); }
         @media(max-width:900px){
           .pillar-row { grid-template-columns: 1fr; min-height: unset; }
-          .pillar-row--reverse .pillar-img-wrap { order: -1; }
+          .pillar-text { order: 0; }
+          .pillar-img-wrap { order: 1; }
         }
 
         .pillar-text {
