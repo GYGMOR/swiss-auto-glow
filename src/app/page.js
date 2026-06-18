@@ -54,7 +54,9 @@ export default function Home() {
   useEffect(() => {
     [bgVideoRef, carVideoRef].forEach(r => {
       if (!r.current) return;
+      r.current.setAttribute('muted', '');
       r.current.muted = true;
+      r.current.load();
       r.current.play().catch(() => {});
     });
   }, []);
@@ -85,7 +87,7 @@ export default function Home() {
           HERO — Fullscreen animated
       ═══════════════════════════════════════════════════════════ */}
       <section className="hero">
-        <video ref={bgVideoRef} className="hero-video" autoPlay muted loop playsInline poster={h.image} aria-hidden="true">
+        <video ref={bgVideoRef} className="hero-video" autoPlay muted loop playsInline poster={h.image} aria-hidden="true" onLoadedMetadata={e=>{e.target.muted=true;e.target.play().catch(()=>{})}}>
           <source src="/hero_video.mp4" type="video/mp4"/>
         </video>
         <div className="hero-video-overlay"/>
@@ -129,7 +131,8 @@ export default function Home() {
                 muted
                 playsInline
                 poster={h.image}
-                onEnded={e => { e.target.pause(); e.target.currentTime = e.target.duration; }}
+                onLoadedMetadata={e=>{e.target.muted=true;e.target.play().catch(()=>{})}}
+                onEnded={e=>{e.target.pause();e.target.currentTime=e.target.duration;}}
               >
                 <source src="/video/car.mp4" type="video/mp4" />
               </video>
