@@ -116,9 +116,9 @@ export default function Home() {
                 className="hero-img"
                 autoPlay
                 muted
-                loop
                 playsInline
                 poster={h.image}
+                onEnded={e => { e.target.pause(); e.target.currentTime = e.target.duration; }}
               >
                 <source src="/video/car.mp4" type="video/mp4" />
               </video>
@@ -349,7 +349,13 @@ export default function Home() {
         .hero-video {
           position: absolute; inset: 0; width: 100%; height: 100%;
           object-fit: cover; z-index: 0; opacity: 0.35;
+          pointer-events: none;
         }
+        video::-webkit-media-controls,
+        video::-webkit-media-controls-panel,
+        video::-webkit-media-controls-start-playback-button,
+        video::-webkit-media-controls-play-button { display: none !important; }
+        video { -webkit-appearance: none; }
         .hero-video-overlay {
           position: absolute; inset: 0; z-index: 0;
           background: linear-gradient(to bottom, rgba(7,7,8,.55) 0%, rgba(7,7,8,.15) 50%, rgba(7,7,8,.85) 100%);
