@@ -4,29 +4,31 @@ import path from 'path';
 const DB_DIR = path.join(process.cwd(), 'data');
 const DB_FILE = path.join(DB_DIR, 'db.json');
 
+const DEFAULT_DB = {
+  inquiries: [],
+  seo: {
+    title: 'Christian Premium Detailing | High-End Autopflege & Veredelung',
+    description: 'Bespoke Fahrzeugaufbereitung, tiefenreine Innenraumpflege und dauerhafter Unterboden- & Rostschutz für exklusive Automobile. Service ausschließlich auf Anfrage.',
+    keywords: 'Car Detailing, Autoaufbereitung, Innenraumpflege, Unterbodenschutz, Rostschutz, Hohlraumversiegelung, Premium Autopflege, Christian Detailing',
+  },
+  visits: [],
+};
+
 function initDb() {
-  if (!fs.existsSync(DB_DIR)) fs.mkdirSync(DB_DIR, { recursive: true });
-  if (!fs.existsSync(DB_FILE)) {
-    const defaultDb = {
-      inquiries: [],
-      seo: {
-        title: 'Christian Premium Detailing | High-End Autopflege & Veredelung',
-        description: 'Bespoke Fahrzeugaufbereitung, tiefenreine Innenraumpflege und dauerhafter Unterboden- & Rostschutz für exklusive Automobile. Service ausschließlich auf Anfrage.',
-        keywords: 'Car Detailing, Autoaufbereitung, Innenraumpflege, Unterbodenschutz, Rostschutz, Hohlraumversiegelung, Premium Autopflege, Christian Detailing',
-      },
-      visits: [],
-    };
-    fs.writeFileSync(DB_FILE, JSON.stringify(defaultDb, null, 2), 'utf-8');
-  }
+  try {
+    if (!fs.existsSync(DB_DIR)) fs.mkdirSync(DB_DIR, { recursive: true });
+    if (!fs.existsSync(DB_FILE)) {
+      fs.writeFileSync(DB_FILE, JSON.stringify(DEFAULT_DB, null, 2), 'utf-8');
+    }
+  } catch { /* read-only filesystem (e.g. Vercel) — fall back to defaults */ }
 }
 
 export function readDb() {
   initDb();
   try {
-    return JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
-  } catch {
-    return { inquiries: [], seo: {}, visits: [] };
-  }
+    if (fs.existsSync(DB_FILE)) return JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
+  } catch {}
+  return { ...DEFAULT_DB };
 }
 
 export function writeDb(data) {

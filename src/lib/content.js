@@ -18,12 +18,12 @@ function deepMerge(base, override) {
 }
 
 export function getContent() {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(FILE)) {
-    fs.writeFileSync(FILE, JSON.stringify(DEFAULT_CONTENT, null, 2), 'utf-8');
-    return DEFAULT_CONTENT;
-  }
   try {
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+    if (!fs.existsSync(FILE)) {
+      fs.writeFileSync(FILE, JSON.stringify(DEFAULT_CONTENT, null, 2), 'utf-8');
+      return DEFAULT_CONTENT;
+    }
     return deepMerge(DEFAULT_CONTENT, JSON.parse(fs.readFileSync(FILE, 'utf-8')));
   } catch {
     return DEFAULT_CONTENT;
@@ -31,8 +31,12 @@ export function getContent() {
 }
 
 export function updateContent(partial) {
-  const updated = deepMerge(getContent(), partial);
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(updated, null, 2), 'utf-8');
-  return updated;
+  try {
+    const updated = deepMerge(getContent(), partial);
+    if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+    fs.writeFileSync(FILE, JSON.stringify(updated, null, 2), 'utf-8');
+    return updated;
+  } catch {
+    return deepMerge(DEFAULT_CONTENT, partial);
+  }
 }
